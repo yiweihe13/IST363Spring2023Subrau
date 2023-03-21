@@ -1,7 +1,7 @@
 import {useState} from 'react';
 import NavOverlay from './NavOverlay';
 import styles from './header.module.css';
-import Button from './button';
+import Button from './Button';
 
 const Header =() =>{
     const [isMenuVisible, setMenuVisible] = useState(false);
