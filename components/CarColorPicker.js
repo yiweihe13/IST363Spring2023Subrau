@@ -1,10 +1,9 @@
-import Swatch from './Swatch';
 import Swatches from './Swatches';
 import {useState} from 'react';
 import Image from 'next/image';
 
 
-const CarColorPicker =( {colors}) =>{
+const CarColorPicker =( {colors,clickHandler}) =>{
     const [activeColor, setActiveColor] = useState(colors[0]);
 
     return <div>
@@ -13,12 +12,16 @@ const CarColorPicker =( {colors}) =>{
             <Image 
             src={`/vehicles/crosstrek/colors/crosstrek-${activeColor.slug}.webp`}
             alt={`crosstrek ${activeColor.name}`}
-            width={300}
-            height={200}
+            width={575}
+            height={300}
             />
         </div>
-        <Swatches colors={colors} />
-        <h3>Color name</h3>
+        <Swatches 
+            colors={colors} 
+            clickHandler={setActiveColor}
+            activeColor={activeColor}
+        />
+        <h3>{activeColor.name}</h3>
     </div>
     
 
