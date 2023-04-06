@@ -1,13 +1,16 @@
+import Heading from './Heading';
 import Swatches from './Swatches';
 import {useState} from 'react';
 import Image from 'next/image';
 
 
+
 const CarColorPicker =( {colors,clickHandler}) =>{
     const [activeColor, setActiveColor] = useState(colors[0]);
-
     return <div>
-        <h2>Color picker</h2>  
+        <Heading level={2}>
+            Colorpicker
+        </Heading>
         <div>
             <Image 
             src={`/vehicles/crosstrek/colors/crosstrek-${activeColor.slug}.webp`}
