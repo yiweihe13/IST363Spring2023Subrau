@@ -4,7 +4,7 @@ module.exports = {
       remotePatterns: [
         {
           protocol: 'http',
-          hostname: 'COPY-AND-PASTE-THE-BASE-URL-OF-YOUR-WORDPRESS-SITE-WITHOUT-THE-HTTP',
+          hostname: 'ist-363-subaru-spring-2023.local',
         },
         {
             protocol: 'https',
